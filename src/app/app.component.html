@@ -1,13 +1,12 @@
-<app-sn-header class="border" ></app-sn-header>
+<app-sn-header class="border" [businessName]='title' [menus]="menuTop"></app-sn-header>
 
 
 
-
-   <!--Slider-->
+  <!-- Slider
     <div class="row border ">
                <app-sn-slider ></app-sn-slider>
         </div>       
-        <!--The content -->
+        The content 
 <div class="container-fluid  customContainer border">
 <div class="row">
     <div class="card text-center col shadow" style="width: 18rem;margin:0.5rem;">
@@ -42,10 +41,11 @@
 <code>TO DO - Features</code>
 <hr>
 
-</div>
+</div>-->
+<router-outlet></router-outlet>
 
 
 
 <!--Footer-->
-<app-sn-footer></app-sn-footer>
+<app-sn-footer [businessName]='title'></app-sn-footer>
 

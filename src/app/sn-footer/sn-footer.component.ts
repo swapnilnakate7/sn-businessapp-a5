@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sn-footer',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sn-footer.component.css']
 })
 export class SnFooterComponent implements OnInit {
+  @Input() businessName:string;
 
   constructor() { }
 

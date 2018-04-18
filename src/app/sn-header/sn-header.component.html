@@ -1,24 +1,16 @@
 <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark headerShadow">
-    <a class="navbar-brand" href="#">Business Name</a>
+    <a class="navbar-brand" href="#">{{businessName}}</a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+   
     <div class="navbar-collapse collapse" id="navbarCollapse" >
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
+        <li class="nav-item active" *ngFor="let menu of menus">
+          <a class="nav-link" href="{{menu.state}}">{{menu.title}} </a>
+        </li>        
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
         </li> 
