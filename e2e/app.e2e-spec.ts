@@ -7,8 +7,8 @@ describe('business-app App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should get the font size value', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getFontSize()).toEqual('16px');
   });
 });
