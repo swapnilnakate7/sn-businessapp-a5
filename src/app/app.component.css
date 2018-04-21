@@ -5,12 +5,3 @@ app-sn-header{
 app-sn-footer{
     margin-top:5px;
 }
-.customContainer{
-    margin-top: 5px;
-}
-
-.shadow:hover{
-    -webkit-box-shadow: 0px 0px 45px 1px rgba(10,1,10,1);
--moz-box-shadow: 0px 0px 45px 1px rgba(10,1,10,1);
-box-shadow: 0px 0px 45px 1px rgba(10,1,10,1);
-}
