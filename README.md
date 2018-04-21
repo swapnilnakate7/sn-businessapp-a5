@@ -1,14 +1,13 @@
 # BusinessApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+Updated the dependencies versions and this release has following features.
+1.Customized the Module Name
+2.Uses Typescript classes for features and products 
+3.Basic Routing is implemented
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -24,4 +23,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You can reach out to me at https://swapnilnakate.in | nakate.swapnil7@gmail.com | @swapnilnakate7 (Twitter)
