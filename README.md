@@ -1,9 +1,9 @@
 # BusinessApp
 
 Updated the dependencies versions and this release has following features.
-*   1.Customized the Module Name
-*   2.Uses Typescript classes for features and products 
-*   3.Basic Routing is implemented
+*   Customized the Module Name
+*   Uses Typescript classes for features and products 
+*   Basic Routing is implemented
 
 ## Development server
 
