@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {SnSliderComponent} from '../sn-slider/sn-slider.component';
 import { SnHomeComponent } from './sn-home.component';
 
 describe('SnHomeComponent', () => {
@@ -8,7 +8,7 @@ describe('SnHomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SnHomeComponent ]
+      declarations: [ SnHomeComponent ,SnSliderComponent]
     })
     .compileComponents();
   }));

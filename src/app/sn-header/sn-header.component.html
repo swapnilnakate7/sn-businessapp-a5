@@ -9,7 +9,7 @@
     <div class="navbar-collapse collapse" id="navbarCollapse" >
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active" *ngFor="let menu of menus">
-          <a class="nav-link" href="{{menu.state}}">{{menu.title}} </a>
+          <a class="nav-link" routerLink="{{menu.state}}" routerLinkActive="activeMenu">{{menu.title}} </a>
         </li>        
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
