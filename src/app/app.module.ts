@@ -29,7 +29,9 @@ const appRoutes:Routes = [
   {
       path:'services',
       component:SnServicesComponent
-  }
+  },
+  
+  { path: '**', redirectTo: 'home'}
 ];
 @NgModule({
   declarations: [
@@ -48,4 +50,4 @@ const appRoutes:Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class SnBusinessAppModule { }
