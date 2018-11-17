@@ -1,12 +1,12 @@
 {
   "name": "sn-business-app",
-  "description": "Angular 5 Business App",
+  "description": "Angular 7 Business App",
   "author": {
     "name": "Swapnil Nakate",
     "email": "nakate.swapnil7@gmail.com",
     "url": "https://swapnilnakate.in"
   },
-  "version": "0.0.3",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
