@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ConfigureService } from '../services/configure.service';
 
 @Component({
   selector: 'app-sn-footer',
@@ -6,11 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./sn-footer.component.css']
 })
 export class SnFooterComponent implements OnInit {
-  @Input() businessName:string;
+  @Input() businessName: string;
+  theme = '';
 
-  constructor() { }
+  constructor(private configService: ConfigureService) { }
 
   ngOnInit() {
+    this.configService.themeUpdated.subscribe(newTheme => {
+      this.theme = newTheme;
+    });
   }
 
 }

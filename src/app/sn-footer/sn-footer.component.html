@@ -1,5 +1,6 @@
-<footer class="fixed-bottom bg-dark footerShadow">
+<footer class="fixed-bottom footerShadow"
+[ngClass]="{'bg-primary': theme == 'primary','bg-dark':theme=='dark'}">
   <div class="container">
-      <span class="text-muted">&copy; {{businessName}}</span>
+      <span [ngClass]="{'text-white': theme == 'primary','text-muted':theme=='dark'}">&copy; {{businessName}}</span>
   </div>
 </footer>

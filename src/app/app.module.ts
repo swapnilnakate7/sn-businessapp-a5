@@ -10,10 +10,11 @@ import { SnFooterComponent } from './sn-footer/sn-footer.component';
 import { SnProductsComponent } from './sn-products/sn-products.component';
 import { SnServicesComponent } from './sn-services/sn-services.component';
 import { SnHomeComponent } from './sn-home/sn-home.component';
-import {RouterModule,Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 //   import * as $  from 'jquery';
-const appRoutes:Routes = [
+const appRoutes: Routes = [
   {
     path: '',
     component: SnHomeComponent
@@ -23,15 +24,15 @@ const appRoutes:Routes = [
     component: SnHomeComponent
   },
   {
-      path:'products',
-      component:SnProductsComponent
+    path: 'products',
+    component: SnProductsComponent
   },
   {
-      path:'services',
-      component:SnServicesComponent
+    path: 'services',
+    component: SnServicesComponent
   },
-  
-  { path: '**', redirectTo: 'home'}
+
+  { path: '**', redirectTo: 'home' }
 ];
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ const appRoutes:Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
