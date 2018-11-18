@@ -4,7 +4,7 @@ import { SnHeaderComponent } from './sn-header/sn-header.component';
 import { SnFooterComponent } from './sn-footer/sn-footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 const appRoutes: Routes = [
@@ -19,7 +19,7 @@ describe('AppComponent', () => {
         SnFooterComponent
       ],
       imports: [RouterModule.forRoot(appRoutes), HttpClientModule],
-      providers: [{ provide: APP_BASE_HREF, useValue: '/' },HttpClient]
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }, HttpClient]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

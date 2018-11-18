@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sn-slider.component.css']
 })
 export class SnSliderComponent implements OnInit {
-   sliderImageUrl:string='assets/images/slider.svg';
+  sliderImageUrl = 'assets/images/slider.svg';
   constructor() { }
 
   ngOnInit() {
