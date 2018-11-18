@@ -1,9 +1,13 @@
-# BusinessApp
+# SnBusinessApp
 
 Updated the dependencies versions and this release has following features.
-*   Customized the Module Name
+*   Updated to Angular 7
 *   Uses Typescript classes for features and products 
 *   Basic Routing is implemented
+*   JSON Based Menu, Features, Theme (Supports Primary & Dark)
+
+## Live Demo
+You can visit `https://swapnilnakate7.github.io/sn-businessapp-a5/` for deployment with latest codebase.
 
 ## Development server
 
@@ -11,7 +15,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/sn-business-app` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 

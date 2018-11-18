@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  PRODUCTS_URL: '/assets/products.json',
-  CONFIG_URL: '/assets/options.json'
+  PRODUCTS_URL: 'assets/products.json',
+  CONFIG_URL: 'assets/options.json'
 };
