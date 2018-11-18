@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ConfigureService } from './services/configure.service';
-import { HttpClient } from '@angular/common/http';
+
 import { ProductService } from './services/product.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   title = 'SnBiz';
   theme = '';
   menuTop: any = [];
-  constructor(private configService: ConfigureService, private productService: ProductService, private http: HttpClient) { }
+  constructor(private configService: ConfigureService, private productService: ProductService) { }
   ngOnInit() {
     this.configService.initConfig();
     this.productService.initProductList();

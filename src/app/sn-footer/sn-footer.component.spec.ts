@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SnFooterComponent } from './sn-footer.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('SnFooterComponent', () => {
   let component: SnFooterComponent;
@@ -8,9 +9,10 @@ describe('SnFooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SnFooterComponent ]
+      declarations: [SnFooterComponent],
+      providers: [HttpClient, HttpHandler]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
