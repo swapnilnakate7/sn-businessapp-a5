@@ -1,1 +1,20 @@
-<h2 *ngIf="product">  {{product.title}}</h2>
+<div *ngIf="product" class="row product-detail">
+  <div class="col-sm-12">
+    <h2 class="display-4"> {{product.title}}</h2>
+    <p class="lead"> {{product.description}}</p>
+    <ul class="nav nav-pills nav-fill border border-success">
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)" [ngClass]="{'active':tabSelected ==='specs'}" (click)="tabSelect('specs')">Specifications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)" [ngClass]="{'active':tabSelected ==='warranty'}" (click)="tabSelect('warranty')">Warranty</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)" [ngClass]="{'active':tabSelected ==='ship'}" (click)="tabSelect('ship')">Shipping</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)" [ngClass]="{'active':tabSelected ==='support'}" (click)="tabSelect('support')">Support</a>
+      </li>
+    </ul>
+  </div>
+</div>

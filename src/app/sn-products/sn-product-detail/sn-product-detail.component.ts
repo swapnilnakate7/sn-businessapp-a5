@@ -8,6 +8,7 @@ import { ProductService } from '../../services/product.service';
 })
 export class SnProductDetailComponent implements OnInit {
     product: Product;
+    tabSelected = '';
     constructor(private route: ActivatedRoute, private prodService: ProductService) { }
 
     ngOnInit() {
@@ -15,19 +16,21 @@ export class SnProductDetailComponent implements OnInit {
         console.log(this.route.snapshot.params['id']);
         this.product = this.prodService.getProductList()[+this.route.snapshot.params['id']];
         this.route.params.subscribe(data => {
-
             console.log('loaded', data);
             this.exec(+data.id);
-        
         });
     }
 
     exec(data) {
         this.prodService.productsUpdated.subscribe(
             res => {
-              this.product = this.prodService.getProductList()[data];
-              console.log('loaded', this.product);
+                this.product = this.prodService.getProductList()[data];
+                console.log('loaded', this.product);
             }
-          );
+        );
+    }
+
+    tabSelect(tabName) {
+        this.tabSelected = tabName;
     }
 }
