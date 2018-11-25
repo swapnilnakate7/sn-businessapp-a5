@@ -1,30 +1,16 @@
-   <!--Slider-->
-   <div class="row border ">
-    <app-sn-slider ></app-sn-slider>
-</div>       
+<!--Slider-->
+<div class="row border ">
+  <app-sn-slider></app-sn-slider>
+</div>
 <!--The content -->
 <div class="container-fluid  customContainer border">
-<div class="row">
-<div class="card text-center col shadow" style="width: 18rem;margin:0.5rem;" *ngFor="let feature of features">
-<div class="card-body">
-<h5 class="card-title" >{{feature.title}}</h5>
-<p class="card-text">{{feature.desc}}</p>
-<a href="#" class="btn btn-primary" (click)="onclickFeature(feature)">Go somewhere</a>
-</div>
-</div>
-<!--<div class="card text-center col shadow" style="width: 18rem;margin:0.5rem;">
-<div class="card-body">
- <h5 class="card-title">Feature #2</h5>
- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
- <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-<div class="card text-center col shadow" style="width: 18rem;margin:0.5rem;">
- <div class="card-body">
-   <h5 class="card-title">Feature #3</h5>
-   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-   <a href="#" class="btn btn-primary">Go somewhere</a>
- </div>
-</div>-->
-</div>
+  <div class="row">
+    <div class="card text-center col shadow" style="width: 18rem;margin:0.5rem;" *ngFor="let feature of features">
+      <div class="card-body">
+        <h5 class="card-title">{{feature.title}}</h5>
+        <p class="card-text">{{feature.desc}}</p>
+        <a href="#" class="btn btn-primary" (click)="onclickFeature(feature)">Go somewhere</a>
+      </div>
+    </div>
+  </div>
 </div>

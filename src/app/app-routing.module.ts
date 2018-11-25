@@ -3,6 +3,7 @@ import { RouterModule, Router, Routes } from '@angular/router';
 import { SnHomeComponent } from './sn-home/sn-home.component';
 import { SnProductsComponent } from './sn-products/sn-products.component';
 import { SnServicesComponent } from './sn-services/sn-services.component';
+import { SnProductDetailComponent } from './sn-products/sn-product-detail/sn-product-detail.component';
 
 const appRoutes: Routes = [
     {
@@ -18,10 +19,12 @@ const appRoutes: Routes = [
         component: SnProductsComponent
     },
     {
+        path: 'product/:id', component: SnProductDetailComponent
+    },
+    {
         path: 'services',
         component: SnServicesComponent
     },
-
     { path: '**', redirectTo: 'home' }
 ];
 

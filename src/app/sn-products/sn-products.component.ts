@@ -1,20 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../sn-models/sn-product.model';
 import { ProductService } from '../services/product.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-sn-products',
   templateUrl: './sn-products.component.html',
   styleUrls: ['./sn-products.component.css']
 })
 export class SnProductsComponent implements OnInit {
-  /*products: Product[] = [new Product('MyProduct 1', 20, 'Description 1'),
-  new Product('MyProduct 2', 30, 'Description 2'),
-  new Product('MyProduct 3', 40, 'Description 3'),
-  new Product('MyProduct 4', 50, 'Description 4')];*/
   products: Product[] = [];
 
 
-  constructor(private productsService: ProductService) {
+  constructor(private productsService: ProductService, private route: ActivatedRoute, private router: Router) {
     this.products = this.productsService.getProductList();
   }
 
@@ -26,8 +23,8 @@ export class SnProductsComponent implements OnInit {
     );
   }
 
-  buy(p) {
-    console.log(p);
+  buy(p, i) {
+    this.router.navigate(['product/' + i]);
   }
 
 }
