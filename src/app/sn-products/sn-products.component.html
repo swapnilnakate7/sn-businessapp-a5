@@ -1,9 +1,17 @@
-<div class="card-deck customContainer">
-<div class="card"  *ngFor="let product of products">
-    
-  <div class="card-body" >
-      <div class="card-title">{{product.title}}</div>
-      <p class="card-text">{{product.description}}</p>
-      <button class="btn btn-primary" (click)="buy(product)">Buy @{{product.price}}</button>
+<div class="row card-container">
+  <div class="col-sm-3" *ngFor="let product of products">
+    <div class="card text-center ">
+      <div class="card-header">
+        {{product.title}}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.description}}</p>
+        <a href="#" class="btn btn-primary">Buy @{{product.price}}</a>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+    </div>
   </div>
-</div></div>
+</div>

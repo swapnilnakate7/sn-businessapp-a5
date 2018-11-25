@@ -1,7 +1,8 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product } from '../sn-products/sn-product.model';
+import { Product } from '../sn-models/sn-product.model';
 import { environment } from '../../environments/environment';
+import { Subject } from 'rxjs/index';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { environment } from '../../environments/environment';
 export class ProductService {
   private productList: Product[] = [];
   private PRODUCTLIST_ENDPOINT = environment.PRODUCTS_URL;
-  productsUpdated = new EventEmitter<any>();
+  productsUpdated = new Subject<any>();
   constructor(private http: HttpClient) { }
 
   initProductList() {
@@ -26,7 +27,7 @@ export class ProductService {
     products.forEach((product: any) => {
       this.productList.push(new Product(product.title, product.price, product.description));
     });
-    this.productsUpdated.emit(null);
+    this.productsUpdated.next(null);
   }
 
   getProductList() {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './sn-product.model';
+import { Product } from '../sn-models/sn-product.model';
 import { ProductService } from '../services/product.service';
 @Component({
   selector: 'app-sn-products',

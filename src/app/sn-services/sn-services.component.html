@@ -1,3 +1,7 @@
-<p>
-  sn-services works!
-</p>
+<section>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let service of services">
+{{service.name}}<span  class="btn btn-success">  More ></span>
+    </li>
+  </ul>
+</section>
