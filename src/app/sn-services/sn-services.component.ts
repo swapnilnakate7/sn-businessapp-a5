@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { Service } from '../sn-models/sn-service.model';
 
@@ -8,10 +8,15 @@ import { Service } from '../sn-models/sn-service.model';
   styleUrls: ['./sn-services.component.css']
 })
 export class SnServicesComponent implements OnInit {
+  showPopup = false;
   services: Array<any> = [new Service('Service 1', 'Description 1'), new Service('Service 2', 'Description 2')];
   constructor() { }
 
   ngOnInit() {
+  }
+
+  togglePopUp() {
+    this.showPopup = !this.showPopup;
   }
 
 }

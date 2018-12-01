@@ -1,0 +1,28 @@
+.popup {
+  display: block;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  background-color: lightblue;
+  border: 2px solid red;
+}
+
+.close-popup {
+  display: none;
+}
+
+.close-btn {
+    float: right;
+    background-color: lightgreen;
+    width: 100%;
+    text-align: center;
+
+}

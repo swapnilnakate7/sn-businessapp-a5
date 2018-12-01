@@ -1,7 +1,20 @@
 <section>
   <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let service of services">
-{{service.name}}<span  class="btn btn-success">  More ></span>
+      {{service.name}}<span class="btn btn-success" (click)="togglePopUp()"> More ></span>
     </li>
   </ul>
 </section>
+
+
+<div class="popup" [ngClass]="{'close-popup':!showPopup}">
+ 
+    <div (click)="togglePopUp()" class="close-btn">close</div>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, repellat dolore. Ad reprehenderit, adipisci
+    saepe nihil ducimus blanditiis exercitationem molestias vero et! Repellendus eum consequuntur quae dolorum
+    voluptates atque ipsa?Perspiciatis nam voluptatem quisquam at ipsa quod numquam corporis qui blanditiis architecto.
+    Esse, vitae facilis ipsum officiis, ut perferendis cum maxime natus, eum sapiente soluta sunt! Quo, eum quaerat.
+    Praesentium?</p>
+
+</div>

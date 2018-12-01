@@ -11,7 +11,7 @@ export class SnProductsComponent implements OnInit {
   products: Product[] = [];
 
 
-  constructor(private productsService: ProductService, private route: ActivatedRoute, private router: Router) {
+  constructor(private productsService: ProductService, private router: Router) {
     this.products = this.productsService.getProductList();
   }
 
