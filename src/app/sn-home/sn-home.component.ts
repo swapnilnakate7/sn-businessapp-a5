@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit, OnDestroy, ElementRef } from '@angular/core';
 import { SnSliderComponent } from '../sn-slider/sn-slider.component';
 import { Feature } from '../sn-models/sn-features.model';
 import { ConfigureService } from '../services/configure.service';
@@ -8,7 +8,8 @@ import { ConfigureService } from '../services/configure.service';
   templateUrl: './sn-home.component.html',
   styleUrls: ['./sn-home.component.css']
 })
-export class SnHomeComponent implements OnInit {
+export class SnHomeComponent implements OnInit, AfterContentInit, OnDestroy {
+  so:any;
 
 
   /*feature1: Feature = new Feature('myFeature 1', 'Feature Desc 1', '#');
@@ -20,7 +21,7 @@ export class SnHomeComponent implements OnInit {
     console.log(this.features);
   }
 
-  constructor(private configService: ConfigureService) {
+  constructor(private configService: ConfigureService,private el: ElementRef) {
     this.features = this.configService.getFeatures();
    }
 
@@ -28,6 +29,16 @@ export class SnHomeComponent implements OnInit {
     this.configService.featuresUpdated.subscribe((features) => {
       this.features = features;
     });
+  }
+
+  ngAfterContentInit() {
+    this.so = ScrollOut({
+      scope: this.el.nativeElement
+    });
+  }
+
+  ngOnDestroy() {
+    this.so.teardown();
   }
 
 

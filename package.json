@@ -32,6 +32,7 @@
     "jquery": "^3.5.1",
     "popper.js": "^1.12.9",
     "rxjs": "^6.6.2",
+    "scroll-out": "^2.2.12",
     "zone.js": "^0.10.3"
   },
   "devDependencies": {
